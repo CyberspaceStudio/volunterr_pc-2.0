@@ -18,7 +18,7 @@ service.interceptors.request.use(function (config) {
     const token = store.state.login.token;
 
     if (token) {
-        config.headers.Authorization = token;
+        config.headers.token = token;
     }
     //对post的内容序列化
     config.method === 'post'
